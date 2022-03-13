@@ -1,0 +1,50 @@
+.cart {
+    min-height: calc(100vh - 120px);
+    width: 90vw;
+    margin-top: 40px;
+    padding: 2.5rem 0;
+    max-width: $fixed-width;
+    margin: 0 auto;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__empty {
+        text-transform: lowercase;
+        color: $clr-grey-5;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    &__total {
+        h4 {
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.clear-btn {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    color: $clr-red-dark;
+    border: 1px solid $clr-red-dark;
+    margin-top: 2.25rem;
+    border-radius: $radius;
+
+    &:hover {
+        background-color: $clr-red-light;
+        color: $clr-red-dark;
+        border-color: $clr-red-light;
+    }
+}

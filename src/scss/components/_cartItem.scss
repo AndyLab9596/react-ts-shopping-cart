@@ -1,0 +1,58 @@
+.cart__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+    }
+
+    h4 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    &__price {
+        color: $clr-grey-5;
+    }
+
+    &__remove {
+        color: $clr-primary;
+        letter-spacing: $spacing;
+        cursor: pointer;
+        font-size: 0.85rem;
+        background: transparent;
+        border: none;
+        margin-top: 0.375rem;
+        transition: $transition;
+
+        &:hover {
+            color: $clr-primary-light;
+        }
+    }
+
+    &-adjust {
+        width: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+            fill: $clr-primary;
+            &:hover {
+                fill: $clr-primary-light;
+            }
+        }
+    }
+
+    &__amount {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+}
