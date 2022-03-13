@@ -1,12 +1,13 @@
 import React from 'react'
+import { CartType } from '../../StateManagement/reducer'
 
-const CartItem = () => {
+const CartItem: React.FC<CartType> = ({ id, img, title, price, amount }) => {
     return (
         <article className='cart__item'>
-            <img src="https://picsum.photos/200/300" alt='title' />
+            <img src={img} alt={title} />
             <div>
-                <h4>OKLALA</h4>
-                <h4 className='cart__item__price'>$999</h4>
+                <h4>{title}</h4>
+                <h4 className='cart__item__price'>${price}</h4>
                 {/* remove button */}
                 <button className='cart__item__remove'>
                     remove
@@ -20,7 +21,7 @@ const CartItem = () => {
                     </svg>
                 </button>
                 {/* amount */}
-                <p className='cart__item__amount'>1</p>
+                <p className='cart__item__amount'>{amount}</p>
                 {/* decrease amount */}
                 <button className='cart__item-adjust'>
                     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>
